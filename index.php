@@ -1,3 +1,8 @@
+<?php
+
+require_once './db.php'
+
+?>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -9,7 +14,8 @@
 </head>
 
 <body>
-
+  <h1>Prova</h1>
+  <?php var_dump($purinaOne) ?>
 </body>
 
 </html>
