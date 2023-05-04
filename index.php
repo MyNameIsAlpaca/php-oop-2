@@ -41,6 +41,27 @@ require_once './db.php'
           <div class="info-section">
             <div class="title"><?php echo $product->name ?></div>
             <div class="price"><?php echo $product->price ?>€</div>
+            <?php if (get_class($product) == 'Food') {
+            ?>
+              <div class="ingredients">Ingredienti: <?php foreach ($product->ingredients as $ingredients) {
+                                                      echo $ingredients . ' ';
+                                                    } ?></div>
+            <?php
+            } ?>
+            <?php if (get_class($product) == 'Kennels') {
+            ?>
+              <div class="materials">Materiali: <?php foreach ($product->material as $material) {
+                                                  echo $material . ' ';
+                                                } ?></div>
+            <?php
+            } ?>
+            <?php if (get_class($product) == 'Toy') {
+            ?>
+              <div class="ingredients">Caratteristiche: <?php foreach ($product->hardness as $hardness) {
+                                                          echo $hardness . ' ';
+                                                        } ?></div>
+            <?php
+            } ?>
           </div>
         </div>
       <?php
@@ -71,6 +92,27 @@ require_once './db.php'
           <div class="info-section">
             <div class="title"><?php echo $product->name ?></div>
             <div class="price"><?php echo $product->price ?>€</div>
+            <?php if (get_class($product) == 'Food') {
+            ?>
+              <div class="ingredients">Ingredienti: <?php foreach ($product->ingredients as $ingredients) {
+                                                      echo $ingredients . ' ';
+                                                    } ?></div>
+            <?php
+            } ?>
+            <?php if (get_class($product) == 'Kennels') {
+            ?>
+              <div class="ingredients">Materiali: <?php foreach ($product->material as $material) {
+                                                    echo $material . ' ';
+                                                  } ?></div>
+            <?php
+            } ?>
+            <?php if (get_class($product) == 'Toy') {
+            ?>
+              <div class="ingredients">Caratteristiche: <?php foreach ($product->hardness as $hardness) {
+                                                          echo $hardness . ' ';
+                                                        } ?></div>
+            <?php
+            } ?>
           </div>
         </div>
       <?php

@@ -7,7 +7,7 @@ class Kennels extends Product
   public $material;
   public $water_resistence;
 
-  function __construct(string $name, string $image, string $animal, float $price, string $size, string $material, string $water_resistence)
+  function __construct(string $name, string $image, string $animal, float $price, string $size, array $material, string $water_resistence)
   {
 
     parent::__construct($name, $image, $animal, $price);
