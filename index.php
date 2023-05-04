@@ -16,6 +16,9 @@ require_once './db.php'
 <body>
   <h1>Prova</h1>
   <?php var_dump($purinaOne) ?>
+  <?php var_dump($pallinaGialla) ?>
+  <?php var_dump($cuccia_legno_1) ?>
+
 </body>
 
 </html>
