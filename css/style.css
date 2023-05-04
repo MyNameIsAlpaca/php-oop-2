@@ -8,6 +8,19 @@ body{
   font-family: sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3.6em;
+  color: darkgreen;
+  padding-bottom: 40px;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 2.5em;
+}
+
 .container{
   max-width: 1200px;
   margin: auto;
@@ -16,17 +29,33 @@ body{
   align-content: center;
 }
 
-.container .dog-section .card-container .card {
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 40px;
+  justify-content: space-between;
+}
+
+.card-container .card {
   position: relative;
   display: flex;
   flex-direction: column;
   max-width: calc(100% / 5 - 20px);
   border: 1px solid black;
+  gap: 20px;
+  align-items: center;
 }
 
-.container .dog-section .card-container .card .immagine-container {
-  height: 200px;
+.card-container .card .info-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
+.card-container .card .immagine-container {
+  height: 200px;
+  width: 200px;
 }
 
 .section-icon{
@@ -50,8 +79,8 @@ body{
   background-color: white;
 }
 
-.container .dog-section .card-container .card .immagine-container .product_img{
-  max-width: 100%;
+.card-container .card .immagine-container .product_img{
+  width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }

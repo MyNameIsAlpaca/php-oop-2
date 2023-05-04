@@ -17,37 +17,65 @@ require_once './db.php'
 <body>
   <div class="container">
     <h1>ZooShop</h1>
-    <div class="dog-section">
-      <h2>Cani!</h2>
-      <div class="card-container">
-        <?php
-        foreach ($allProduct as $product) {
-        ?>
-          <div class="card">
-            <div class="immagine-container">
-              <img class="type-icon" src="<?php if (get_class($product) == 'Food') {
-                                            echo 'img/food-icon.png';
-                                          } else if (get_class($product) == 'Kennels') {
-                                            echo 'img/kennels-icon.jpg';
-                                          } else if (get_class($product) == 'Toy') {
-                                            echo 'img/toy-icon.png';
-                                          } ?>" alt="">
-              <img class="section-icon" src="
-              <?php
-              if ($product->animal == 'Cane') {
-                echo  'img/dogicon.jpg';
-              } ?>" alt="icona cane">
-              <img class="product_img" src="<?php echo $product->image ?>" alt="cuccia di legno">
-            </div>
-            <div class="info-section">
-              <div class="title"><?php echo $product->name ?></div>
-              <div class="price"><?php echo $product->price ?>€</div>
-            </div>
+    <h2 class="section-title">Sezione Cani</h2>
+    <div class="card-container">
+      <?php
+      foreach ($allDogProduct as $product) {
+      ?>
+        <div class="card">
+          <div class="immagine-container">
+            <img class="type-icon" src="<?php if (get_class($product) == 'Food') {
+                                          echo 'img/food-icon.png';
+                                        } else if (get_class($product) == 'Kennels') {
+                                          echo 'img/kennels-icon.jpg';
+                                        } else if (get_class($product) == 'Toy') {
+                                          echo 'img/toy-icon.png';
+                                        } ?>" alt="">
+            <img class="section-icon" src="
+            <?php
+            if ($product->animal == 'Cane') {
+              echo  'img/dogicon.jpg';
+            } ?>" alt="icona cane">
+            <img class="product_img" src="<?php echo $product->image ?>" alt="cuccia di legno">
           </div>
-        <?php
-        }
-        ?>
-      </div>
+          <div class="info-section">
+            <div class="title"><?php echo $product->name ?></div>
+            <div class="price"><?php echo $product->price ?>€</div>
+          </div>
+        </div>
+      <?php
+      }
+      ?>
+    </div>
+    <h2 class="section-title">Sezione Gatti</h2>
+    <div class="card-container">
+      <?php
+      foreach ($allCatProduct as $product) {
+      ?>
+        <div class="card">
+          <div class="immagine-container">
+            <img class="type-icon" src="<?php if (get_class($product) == 'Food') {
+                                          echo 'img/food-icon.png';
+                                        } else if (get_class($product) == 'Kennels') {
+                                          echo 'img/kennels-icon.jpg';
+                                        } else if (get_class($product) == 'Toy') {
+                                          echo 'img/toy-icon.png';
+                                        } ?>" alt="">
+            <img class="section-icon" src="
+            <?php
+            if ($product->animal == 'Gatto') {
+              echo  'img/catIcon.jpg';
+            } ?>" alt="icona cane">
+            <img class="product_img" src="<?php echo $product->image ?>" alt="cuccia di legno">
+          </div>
+          <div class="info-section">
+            <div class="title"><?php echo $product->name ?></div>
+            <div class="price"><?php echo $product->price ?>€</div>
+          </div>
+        </div>
+      <?php
+      }
+      ?>
     </div>
   </div>
 
