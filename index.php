@@ -53,6 +53,7 @@ require_once './db.php'
               <div class="materials">Materiali: <?php foreach ($product->material as $material) {
                                                   echo $material . ' ';
                                                 } ?></div>
+              <div class="size">Dimensioni: <?php echo $product->size ?></div>
             <?php
             } ?>
             <?php if (get_class($product) == 'Toy') {
@@ -104,6 +105,7 @@ require_once './db.php'
               <div class="ingredients">Materiali: <?php foreach ($product->material as $material) {
                                                     echo $material . ' ';
                                                   } ?></div>
+              <div class="size">Dimensioni: <?php echo $product->size ?></div>
             <?php
             } ?>
             <?php if (get_class($product) == 'Toy') {
