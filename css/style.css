@@ -46,10 +46,11 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: calc(100% / 5 - 20px);
+  width: calc(100% / 5 - 20px);
   border: 1px solid black;
   gap: 20px;
   align-items: center;
+  cursor: pointer;
 }
 
 .card-container .card .info-section{
